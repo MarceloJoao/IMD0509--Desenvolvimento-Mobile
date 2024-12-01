@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AlteracaoProdutoActivity">
+
+    <TextView
+        android:id="@+id/text_imd"
+        android:layout_width="432dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        android:background="#FF5722"
+        android:gravity="center"
+        android:text="IMDMARKET"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_alter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_alter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="ALTERAR PRODUTO"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/ed_cod_alterar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_imd" />
+
+    <TextView
+        android:id="@+id/ed_cod_alterar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="11dp"
+        android:text="@string/code_product"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_cod_alterar"
+        app:layout_constraintStart_toStartOf="@+id/edit_cod_alterar"
+        app:layout_constraintTop_toBottomOf="@+id/text_alter" />
+
+    <EditText
+        android:id="@+id/edit_cod_alterar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ed_nome_alterar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_cod_alterar" />
+
+    <TextView
+        android:id="@+id/ed_nome_alterar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_product"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_nome_alterar"
+        app:layout_constraintStart_toStartOf="@+id/edit_nome_alterar"
+        app:layout_constraintTop_toBottomOf="@+id/edit_cod_alterar" />
+
+    <EditText
+        android:id="@+id/edit_nome_alterar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ed_descricao_alterar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_nome_alterar" />
+
+    <TextView
+        android:id="@+id/ed_descricao_alterar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/desc_product"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_descricao_alterar"
+        app:layout_constraintStart_toStartOf="@+id/edit_descricao_alterar"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome_alterar" />
+
+    <EditText
+        android:id="@+id/edit_descricao_alterar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ed_estoque_alterar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_descricao_alterar" />
+
+    <TextView
+        android:id="@+id/ed_estoque_alterar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/est_product"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_estoque_alterar"
+        app:layout_constraintStart_toStartOf="@+id/edit_estoque_alterar"
+        app:layout_constraintTop_toBottomOf="@+id/edit_descricao_alterar" />
+
+    <EditText
+        android:id="@+id/edit_estoque_alterar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/bt_limpar_alteracao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_estoque_alterar" />
+
+    <Button
+        android:id="@+id/bt_altera"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="25dp"
+        android:text="Alterar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_limpar_alteracao"
+        app:layout_constraintEnd_toStartOf="@+id/bt_limpar_alteracao"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_limpar_alteracao"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="73dp"
+        android:text="Limpar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_altera"
+        app:layout_constraintTop_toBottomOf="@+id/edit_estoque_alterar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CadastroProdutoActivity">
+
+    <TextView
+        android:id="@+id/text_cad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="32dp"
+        android:background="#FF5722"
+        android:gravity="center"
+        android:text="IMDMARKET"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/ed_cad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ed_cad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="CADASTRAR PRODUTO"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ed_codigo_produto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_cad" />
+
+    <TextView
+        android:id="@+id/ed_codigo_produto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="@string/code_product"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_codigo"
+        app:layout_constraintStart_toStartOf="@+id/edit_codigo"
+        app:layout_constraintTop_toBottomOf="@+id/ed_cad" />
+
+    <EditText
+        android:id="@+id/edit_codigo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="34dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ed_nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_codigo_produto" />
+
+    <TextView
+        android:id="@+id/ed_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="@string/name_product"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_nome"
+        app:layout_constraintStart_toStartOf="@+id/edit_nome"
+        app:layout_constraintTop_toBottomOf="@+id/edit_codigo" />
+
+    <EditText
+        android:id="@+id/edit_nome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ed_descricao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_nome" />
+
+    <TextView
+        android:id="@+id/ed_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:text="@string/desc_product"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_descricao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome" />
+
+    <EditText
+        android:id="@+id/edit_descricao"
+        android:layout_width="355dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ed_estoque"
+        app:layout_constraintEnd_toEndOf="@+id/ed_descricao"
+        app:layout_constraintStart_toEndOf="@+id/ed_descricao"
+        app:layout_constraintTop_toBottomOf="@+id/ed_descricao" />
+
+    <TextView
+        android:id="@+id/ed_estoque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/est_product"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_estoque"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_descricao" />
+
+    <EditText
+        android:id="@+id/edit_estoque"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/bt_limpar_cadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_estoque" />
+
+    <Button
+        android:id="@+id/bt_salvar_cadastro"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="42dp"
+        android:text="Salvar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_limpar_cadastro"
+        app:layout_constraintEnd_toStartOf="@+id/bt_limpar_cadastro"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_limpar_cadastro"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="46dp"
+        android:text="Limpar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_salvar_cadastro"
+        app:layout_constraintTop_toBottomOf="@+id/edit_estoque" />
+</androidx.constraintlayout.widget.ConstraintLayout>

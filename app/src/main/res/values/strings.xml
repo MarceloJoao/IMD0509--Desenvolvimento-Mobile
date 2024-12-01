@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">IMDMarket</string>
+    <string name="code_product" translatable="false">Código Produto:</string>
+    <string name="name_product" translatable="false">Nome Produto:</string>
+    <string name="desc_product" translatable="false">Descrição do Produto:</string>
+    <string name="est_product" translatable="false">Estoque:</string>
+    <string name="but_salve" translatable="false">Salvar</string>
+</resources>

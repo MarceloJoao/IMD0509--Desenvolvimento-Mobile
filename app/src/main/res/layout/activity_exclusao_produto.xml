@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ExclusaoProdutoActivity">
+
+    <TextView
+        android:id="@+id/ed_deletar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="DELETAR PRODUTO"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_codigo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imdMarket" />
+
+    <TextView
+        android:id="@+id/text_codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/code_product"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ed_codigo"
+        app:layout_constraintStart_toStartOf="@+id/ed_codigo"
+        app:layout_constraintTop_toBottomOf="@+id/ed_deletar" />
+
+    <EditText
+        android:id="@+id/ed_codigo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="56dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/bt_limpar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_codigo" />
+
+    <Button
+        android:id="@+id/bt_deletar"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="36dp"
+        android:text="Deletar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_limpar"
+        app:layout_constraintEnd_toStartOf="@+id/bt_limpar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/imdMarket"
+        android:layout_width="432dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        android:background="#FF5722"
+        android:gravity="center"
+        android:text="IMDMARKET"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/ed_deletar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_limpar"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="369dp"
+        android:text="Limpar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_deletar"
+        app:layout_constraintTop_toBottomOf="@+id/ed_codigo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
