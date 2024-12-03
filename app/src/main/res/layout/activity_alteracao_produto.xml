@@ -10,8 +10,9 @@
 
     <TextView
         android:id="@+id/text_imd"
-        android:layout_width="432dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
         android:layout_marginBottom="33dp"
         android:background="#FF5722"
         android:gravity="center"
@@ -35,9 +36,8 @@
 
     <TextView
         android:id="@+id/ed_cod_alterar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:layout_width="396dp"
+        android:layout_height="36dp"
         android:layout_marginStart="1dp"
         android:layout_marginBottom="11dp"
         android:text="@string/code_product"
