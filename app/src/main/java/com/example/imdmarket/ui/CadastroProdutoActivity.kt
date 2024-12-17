@@ -58,6 +58,13 @@ class CadastroProdutoActivity : AppCompatActivity() {
                 Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_LONG).show()
             }
         }
+
+        binding.btLimparCadastro.setOnClickListener {
+            binding.editCodigo.setText("")
+            binding.editNome.setText("")
+            binding.editDescricao.setText("")
+            binding.editEstoque.setText("")
+        }
     }
 
 }
