@@ -6,31 +6,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ListagemProdutoActivity">
+    tools:context=".ui.ListagemProdutoActivity">
 
     <TextView
         android:id="@+id/text_listagem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
         android:background="#FF5722"
         android:gravity="center"
         android:text="IMDMARKET"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/ed_lista"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/ed_lista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="530dp"
+        android:layout_marginBottom="700dp"
         android:text="LISTA DE PRODUTO"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/bt_voltar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,11 +51,14 @@
         app:layout_constraintTop_toBottomOf="@+id/ed_lista" />
 
     <ListView
+        android:id="@+id/listprodutos"
         android:layout_width="409dp"
         android:layout_height="529dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="1dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

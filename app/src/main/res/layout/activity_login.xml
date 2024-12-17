@@ -6,20 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
     <TextView
         android:id="@+id/ed_logo"
-        android:layout_width="432dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="33dp"
-        android:background="#FF4D00"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#FF5722"
         android:gravity="center"
         android:text="IMDMARKET"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/text_login"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/text_login"
@@ -28,6 +28,8 @@
         android:gravity="center"
         android:text="Login:"
         android:textSize="28sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30sp"
         app:layout_constraintBottom_toTopOf="@+id/ed_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,10 +41,11 @@
         android:layout_height="0dp"
         android:layout_marginStart="51dp"
         android:layout_marginEnd="51dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="54dp"
         android:ems="10"
         android:hint="Login"
         android:inputType="text"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/text_Senha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +57,7 @@
         android:layout_height="wrap_content"
         android:text="Senha:"
         android:textSize="28sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/ed_senha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,12 +66,25 @@
     <Button
         android:id="@+id/bt_entrar"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="148dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="75dp"
         android:text="Entrar"
-        app:layout_constraintBottom_toTopOf="@+id/text_alterar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_cadastrar" />
+
+    <Button
+        android:id="@+id/bt_cadastrar"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="21dp"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toTopOf="@+id/text_alterar"
+        app:layout_constraintEnd_toStartOf="@+id/bt_entrar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed_senha" />
 
@@ -75,12 +92,14 @@
         android:id="@+id/text_alterar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="166dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="222dp"
         android:text="Esqueci minha senha/login"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_entrar" />
+        app:layout_constraintEnd_toEndOf="@+id/bt_entrar"
+        app:layout_constraintStart_toStartOf="@+id/bt_cadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/bt_cadastrar" />
 
     <EditText
         android:id="@+id/ed_senha"
@@ -88,11 +107,12 @@
         android:layout_height="0dp"
         android:layout_marginStart="51dp"
         android:layout_marginEnd="51dp"
-        android:layout_marginBottom="83dp"
+        android:layout_marginBottom="55dp"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/bt_entrar"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/bt_cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_Senha" />
