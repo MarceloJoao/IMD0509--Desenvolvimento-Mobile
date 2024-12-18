@@ -23,7 +23,7 @@ class AlteracaoProdutoActivity : AppCompatActivity() {
 
 
         binding.btLimparAlteracao.setOnClickListener {
-            var codigo = binding.editCodAlterar.text.toString().toLongOrNull()
+            var codigo = binding.editCodAlterar.text.toString().toLong()
 
             if (codigo != null) {
                 // Buscar o produto pelo código
@@ -48,10 +48,10 @@ class AlteracaoProdutoActivity : AppCompatActivity() {
 
         // Botão para alterar os dados do produto
         binding.btAltera.setOnClickListener {
-            var codigo = binding.editCodAlterar.text.toString().toLongOrNull()
+            var codigo = binding.editCodAlterar.text.toString().toLong()
             var nome = binding.editNomeAlterar.text.toString()
             var descricao = binding.editDescricaoAlterar.text.toString()
-            var estoque = binding.editEstoqueAlterar.text.toString().toIntOrNull()
+            var estoque = binding.editEstoqueAlterar.text.toString().toInt()
 
             // Verificar se todos os campos estão preenchidos corretamente
             if (codigo != null && nome.isNotEmpty() && descricao.isNotEmpty() && estoque != null) {
